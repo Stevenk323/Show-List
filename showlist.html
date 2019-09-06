@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <title>BookWatch | Showlist</title>
+</head>
+<body class="bg-dark">
+     <!--NAVBAR-->
+     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <img src="images/logo.png" alt="">
+            <a class="navbar-brand" href="index.html">BOOKWATCH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+    
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+    
+                <li class="nav-item active">
+                  <a class="nav-link" href="showlist.html">Show List</a>
+                </li>
+            </ul>
+            </div>
+          </nav>
+        
+        <div class="container bg-dark mt-5">
+            <!--TITLE-->
+            <form id="show-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control">
+                </div>
+            </form>
+
+             <!--Episodes-->
+             <form id="show-form" class="eps">
+                    <div class="form-group">
+                        <label for="epW">Episodes Watched</label>
+                        <input type="text" id="epW" class="form-control">
+                    </div>
+                    <div class="form-group">
+                            <label for="epT">Total Episodes</label>
+                            <input type="text" id="epT" class="form-control">
+                    </div>
+
+                    <!--RATING-->
+                    
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <select name="rating" id="rating" class="rating">
+                            <option value="Choose">Choose</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+             </form>
+
+             <!--COMMENTS-->
+             <form id="show-form" class="comments">
+                <div class="form-group">
+                    <label for="comments">Comments(Optional)</label>
+                    <textarea type="text" id="comments" class="form-control"></textarea>
+                </div>
+
+                <input type="submit" value="Add Show" class="btn btn-block btn-primary button mt-5">
+            </form>
+
+
+            <!--FILTER-->
+            <form id="show-form" class="filter mt-5">
+                    <div class="form-group">
+                        <input type="text" id="filter" placeholder="Search" class="form-control">
+                    </div>
+            </form>
+
+            <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th class="lg">Title</th>
+                            <th class="sm">Episodes</th>
+                            <th class="sm">Rating</th>
+                            <th class="sm">Completed</th>
+                            <th class="lg">Comments</th>
+                            <th></th> <!--delete-->
+                        </tr>
+                    </thead>
+                    <tbody id="show-list"></tbody>
+             </table>
+
+        </div>
+        
+        <!--FOOTER-->
+        <footer class="bg-dark">
+            <h3 class="container text-light">Never forget your show or book again</h3>
+            <hr class="mt-5">
+            <p class="text-center">BookWatch &copy; 2019</p>
+        </footer>
+
+        <script src="js/app.js"></script>
+</body>
+<script src="https://kit.fontawesome.com/7c9e5c2cf6.js"></script>
+</html>
